@@ -34,10 +34,6 @@ nav a{
     margin: .5rem;
     padding: 10px;
 }
-.btn:hover{
-    text-decoration: none;
-    color: aqua;
-}
 .common{
     width: 100vw;
     display: flex;
@@ -53,6 +49,9 @@ nav a{
     flex-direction: column;
     grid-area: main;
 }
+
+/* Media quiries here */
+
 @media screen and (max-width:300px) {
     .box{
         display: flex;
@@ -60,6 +59,7 @@ nav a{
     }
     
 }
+
 .btn{
     box-shadow: inset 0px 0px 10px 2px rgb(255, 0, 242);
     outline: none;
@@ -70,6 +70,10 @@ nav a{
     height: 120px;
     color: var(--sec-color);
     margin: 2px 0;
+}
+.btn:hover{
+    box-shadow: inset 0px 0px 10px 2px aqua;
+    color: aqua;
 }
 .btnhover:hover{
     color: aqua;
