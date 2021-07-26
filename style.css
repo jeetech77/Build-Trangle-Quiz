@@ -50,9 +50,14 @@ nav a {
 }
 
 .heading {
+    margin: 1rem 0;
     text-align: center;
     word-break: normal;
     grid-area: heading;
+}
+
+.heading h1 {
+    text-shadow: 1px 10px 30px var(--sec-color);
 }
 
 .btn-section {
@@ -133,9 +138,10 @@ footer p span {
 }
 
 /* TODO:  GuessTheAngle Styling  */
-.heading{
+.heading {
     color: var(--sec-color);
 }
+
 .input-boxs {
     flex-wrap: wrap;
 }
@@ -151,7 +157,7 @@ footer p span {
     color: var(--primary-color);
 }
 
-.input-boxs input:focus{
+.input-boxs input:focus {
     border-color: var(--primary-color);
     background-color: inherit;
 }
@@ -166,17 +172,20 @@ footer p span {
     font-weight: 600;
     margin: 1rem;
 }
-.btn-submit:hover{
+
+.btn-submit:hover {
     box-shadow: 1px 1px 5px 2px var(--sec-color);
     color: var(--sec-color);
     border-color: var(--sec-color);
 }
+
 .angle-label {
     color: var(--primary-color);
     font-weight: 800;
     font-size: 1.6rem;
     margin: 1rem auto;
 }
+
 .output {
     border: 4px solid var(--primary-color);
     border-radius: 10px;
