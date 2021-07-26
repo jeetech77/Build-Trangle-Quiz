@@ -43,14 +43,14 @@ nav a {
 }
 
 .common {
-    width: 100vw;
+    /* width: 100vw; */
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .heading {
-    margin: 1rem 0;
+    margin: 1rem;
     text-align: center;
     word-break: normal;
     grid-area: heading;
@@ -63,16 +63,6 @@ nav a {
 .btn-section {
     flex-direction: column;
     grid-area: main;
-}
-
-/* Media quiries here */
-
-@media screen and (max-width:300px) {
-    .box {
-        display: flex;
-        flex-direction: column;
-    }
-
 }
 
 .btn {
@@ -180,6 +170,7 @@ footer p span {
 }
 
 .angle-label {
+    text-align: center;
     color: var(--primary-color);
     font-weight: 800;
     font-size: 1.6rem;
