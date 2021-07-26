@@ -95,9 +95,13 @@ nav a {
     .box {
         display: flex;
         flex-direction: column;
+    }
+    .input-boxs{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
         flex-shrink: 1;
     }
-
 }
 
 footer {
