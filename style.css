@@ -95,6 +95,7 @@ nav a {
     .box {
         display: flex;
         flex-direction: column;
+        flex-shrink: 1;
     }
 
 }
