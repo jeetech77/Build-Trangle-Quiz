@@ -43,20 +43,20 @@ nav a {
 }
 
 .common {
-    /* width: 100vw; */
+    width: 100vw;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .heading {
-    margin: 1rem;
     text-align: center;
     word-break: normal;
     grid-area: heading;
 }
 
 .heading h1 {
+    margin: 1rem;
     text-shadow: 1px 10px 30px var(--sec-color);
 }
 
