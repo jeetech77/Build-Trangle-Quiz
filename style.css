@@ -89,6 +89,16 @@ nav a {
 
 }
 
+/* Media quries here */
+
+@media screen and (max-width:300px) {
+    .box {
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+
 footer {
     background-color: var(--bg-color);
     padding-top: 1rem;
