@@ -1,51 +1,61 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
-*{
+
+* {
     margin: 0%;
     box-sizing: border-box;
     transition: all .1s linear;
-    --primary-color:rgba(49, 122, 170, 0.226);;
-    --sec-color:rgb(244, 6, 255);
+    --primary-color: aqua;
+    --bg-color: rgba(49, 122, 170, 0.226);
+    ;
+    --sec-color: rgb(244, 6, 255);
 }
-body{
-    color: aqua;
+
+body {
+    color: var(--primary-color);
     font-family: 'Montserrat',
-    'sans-serif';
-    background: linear-gradient(90deg, rgb(17, 102, 102),rgb(63, 23, 23));
-    background: url(./images/CoverTraingle.png)  center no-repeat fixed;
+        'sans-serif';
+    background: linear-gradient(90deg, rgb(17, 102, 102), rgb(63, 23, 23));
+    background: url(./images/Cover.png) center no-repeat fixed;
 }
-.container{
+
+.container {
     min-height: 100vh;
     display: grid;
-    grid-template-areas: 
-    'nav'
-    'heading' 
-    'main'
-    'footer';
+    grid-template-areas:
+        'nav'
+        'heading'
+        'main'
+        'footer';
     place-content: space-between;
 }
 
-nav{
+nav {
     display: flex;
-    justify-content:flex-end;
+    justify-content: space-between;
     grid-area: nav;
 }
-nav a{
+
+nav a {
+    text-shadow: 1px 1px 3px var(--sec-color);
     color: var(--sec-color);
     margin: .5rem;
     padding: 10px;
 }
-.common{
+
+.common {
     width: 100vw;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.heading{
+
+.heading {
     text-align: center;
-    word-break:normal;
+    word-break: normal;
     grid-area: heading;
 }
-.btn-section{
+
+.btn-section {
     flex-direction: column;
     grid-area: main;
 }
@@ -53,59 +63,131 @@ nav a{
 /* Media quiries here */
 
 @media screen and (max-width:300px) {
-    .box{
+    .box {
         display: flex;
         flex-direction: column;
     }
-    
+
 }
 
-.btn{
+.btn {
     box-shadow: inset 0px 0px 10px 2px rgb(255, 0, 242);
     outline: none;
     border: 2px solid black;
-    background-color: var(--primary-color);
+    background-color: var(--bg-color);
     font-size: larger;
     width: 130px;
     height: 120px;
     color: var(--sec-color);
     margin: 2px 0;
+    transition: all .4s linear;
 }
-.btn:hover{
-    box-shadow: inset 0px 0px 10px 2px aqua;
-    color: aqua;
+
+.btn:hover {
+    box-shadow: inset 0px 0px 10px 2px var(--primary-color);
+    color: var(--primary-color);
 }
-.btnhover:hover{
-    color: aqua;
-    text-decoration:none;
+
+.btnhover:hover {
+    color: var(--primary-color);
+    text-decoration: none;
 
 }
-footer{
-    background-color: var(--primary-color);
+
+footer {
+    background-color: var(--bg-color);
     padding-top: 1rem;
     flex-direction: column;
     grid-area: footer;
 }
-footer ul{
+
+footer ul {
     padding: 0%;
     list-style: none;
 }
-footer ul li{
+
+footer ul li {
     margin: 0 1rem;
 }
-footer ul li a{
-    color: aqua;
+
+footer ul li a {
+    color: var(--primary-color);
 }
-footer ul li a:hover{
+
+footer ul li a:hover {
     color: var(--sec-color);
 }
-footer p{
+
+footer p {
     margin: 5px;
     text-align: center;
 }
-footer p a{
+
+footer p a {
+    text-shadow: 1px 1px 3px var(--sec-color);
     color: var(--sec-color);
 }
-footer p span{
+
+footer p span {
     color: red;
+}
+
+/* TODO:  GuessTheAngle Styling  */
+.heading{
+    color: var(--sec-color);
+}
+.input-boxs {
+    flex-wrap: wrap;
+}
+
+.input-boxs input {
+    background-color: var(--bg-color);
+    border: 3px solid var(--sec-color);
+    border-radius: 10px;
+    text-align: center;
+    outline: none;
+    padding: .5rem;
+    margin: 10px 10px;
+    color: var(--primary-color);
+}
+
+.input-boxs input:focus{
+    border-color: var(--primary-color);
+    background-color: inherit;
+}
+
+.btn-submit {
+    cursor: pointer;
+    background-color: inherit;
+    border: 3px solid var(--primary-color);
+    border-radius: 10px;
+    padding: .6rem 1.5rem;
+    color: var(--primary-color);
+    font-weight: 600;
+    margin: 1rem;
+}
+.btn-submit:hover{
+    box-shadow: 1px 1px 5px 2px var(--sec-color);
+    color: var(--sec-color);
+    border-color: var(--sec-color);
+}
+.angle-label {
+    color: var(--primary-color);
+    font-weight: 800;
+    font-size: 1.6rem;
+    margin: 1rem auto;
+}
+.output {
+    border: 4px solid var(--primary-color);
+    border-radius: 10px;
+    background-color: var(--bg-color);
+    font-size: x-large;
+    font-weight: 800;
+    width: 80vw;
+    word-wrap: break-word;
+    padding: 10px;
+    margin: 2rem auto;
+    text-align: center;
+    color: var(--primary-color);
+    text-shadow: 1px 1px 3px var(--sec-color);
 }

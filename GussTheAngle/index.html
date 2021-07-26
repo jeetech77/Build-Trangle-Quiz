@@ -4,26 +4,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/1ad4d3ae1e.js" crossorigin="anonymous" defre></script>
+    <script src="https://kit.fontawesome.com/1ad4d3ae1e.js" crossorigin="anonymous" defer></script>
+    <link rel="stylesheet" href="../style.css">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <div class="container">
-        <nav style="justify-content: flex-end;">
-        <a href="" class="repo-link btnhover">GitHub Repo</a>
+        <nav>
+            <a href="/" class="repo-link btnhover">Home</a>
+            <a href="" class="repo-link btnhover">GitHub Repo</a>
         </nav>
         <div class="heading common">
-            <h1>Welcome to fun with traingle</h1>
+            <h1>Check whether your angles can make a traingle or not.</h1>
         </div>
         <div class="btn-section common">
-            <div class="box-input box">
-                <a href="GussTheAngle/index.html"><button class="btn">Guess the angle</button></a>
-                <a href="/quiz/right.html"><button class="btn">Area of traingle</button></a>
-            </div>
-            <div class="box-output box">
-                <a href="/quiz/acute.html"><button class="btn">Check hypotenuse</button></a>
-                <a href="/quiz/acute.html"><button class="btn">Take quiz here</button></a>
+            <form action="" onsubmit="return false">
+                <label for="angles" class="angle-label common">Enter angles here</label>
+                <div class="input-boxs common">
+                    <input type="number" class="input-box" placeholder="First angle" name='angles' required>
+                    <input type="number" class="input-box" placeholder="Second angle" name='angles' required>
+                    <input type="number" class="input-box" placeholder="Third angle" name='angles' required>
+                </div>
+                <div class="common">
+                    <button type="submit" class="btn-submit">Submit</button>
+                </div>
+            </form>
+            <div class="output common">
+                <p>Result will show-up here.
+                </p>
             </div>
         </div>
         <footer class="social common">
