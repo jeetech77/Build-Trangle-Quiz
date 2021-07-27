@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/1ad4d3ae1e.js" crossorigin="anonymous" defer></script>
+    <link rel="stylesheet" href="../style.css">
+    <title>Document</title>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <a href="/" class="repo-link btnhover">Home</a>
+            <a href="" class="repo-link btnhover">GitHub Repo</a>
+        </nav>
+        <div class="heading common">
+            <h1>Calculate area of a traingle</h1>
+        </div>
+        <div class="btn-section common">
+            <form class="choice common">
+                <label>
+                    <input type="radio" name="areaCalcOption" value="areaCal0" checked>
+                    If you have length of 3 sides
+                </label>
+                <label>
+                    <input type="radio" name="areaCalcOption" value="areaCal1" checked>
+                    If you have base and height length
+                </label>
+                <label>
+                    <input type="radio" name="areaCalcOption" value="areaCal2" checked>
+                    If you have length of 2 sides and included angle
+                </label>
+            </form>
+            <div class="areaCalOption0">
+                <div class="common">
+                    <form action="" onsubmit="return false">
+                        <div class="input-boxs common">
+                            <label for="sides" class="angle-label common">Enter sides length here</label>
+                            <input type="number" class="input-box" placeholder="First side" name='sides' required>
+                            <input type="number" class="input-box" placeholder="Second side" name='sides' required>
+                            <input type="number" class="input-box" placeholder="Third side" name='sides' required>
+                        </div>
+                        <div class="common">
+                            <button type="submit" class="btn-submit">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="areaCalOption1">
+                <div class="common">
+                    <form action="" onsubmit="return false">
+                        <div class="input-boxs common">
+                            <label for="sides" class="angle-label common">Enter base and height length here</label>
+                            <input type="number" class="input-box" placeholder="Base here" name='sides' required>
+                            <input type="number" class="input-box" placeholder="Height here" name='sides' required>
+                        </div>
+                        <div class="common">
+                            <button type="submit" class="btn-submit">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="areaCalOption2">
+                <div class="common">
+                    <form action="" onsubmit="return false">
+                        <div class="input-boxs common">
+                            <label for="sidesAngles" class="angle-label common">Enter sides and angle here</label>
+                            <input type="number" class="input-box" placeholder="First side" name='sidesAngles' required>
+                            <input type="number" class="input-box" placeholder="Second side" name='sidesAngles'
+                                required>
+                            <input type="number" class="input-box" placeholder="Angle here" name='sidesAngles' required>
+                        </div>
+                        <div class="common">
+                            <button type="submit" class="btn-submit">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="output common">
+                <p>Result will show-up here.
+                </p>
+            </div>
+        </div>
+        <footer class="social common">
+            <ul class="common">
+                <li class="social-li">
+                    <a href="https://www.linkedin.com/in/ranjeet-singh-a07017205" target="_blank" class="social-links">
+                        <i class="fa fa-linkedin"></i>
+                    </a>
+                </li>
+                <li class="social-li">
+                    <a href="https://github.com/jeetsdev" target="_blank" class="social-links">
+                        <i class="fa fa-github"></i>
+                    </a>
+                </li>
+                <li class="social-li">
+                    <a href="https://twitter.com/jeetsdev" target="_blank" class="social-links">
+                        <i class="fa fa-twitter"></i>
+                    </a>
+                </li>
+                <li class="social-li">
+                    <a href="https://jeetsdev.netlify.app" target="_blank" class="social-links">
+                        <i class="fa fa-briefcase"></i>
+                    </a>
+                </li>
+            </ul>
+            <p>© 2021 | Made with <span> ❤️ </span> by
+                <a href="https://twitter.com/jeetsdev" class="social-links btnhover">Jeetsdev
+                </a>
+            </p>
+        </footer>
+    </div>
+</body>
+</html>

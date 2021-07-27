@@ -37,7 +37,7 @@ nav {
 
 nav a {
     text-shadow: 1px 1px 3px var(--sec-color);
-    color: var(--sec-color);
+    color: var(--primary-color);
     margin: .5rem;
     padding: 10px;
 }
@@ -84,23 +84,28 @@ nav a {
 }
 
 .btnhover:hover {
-    color: var(--primary-color);
+    color: var(--sec-color);
     text-decoration: none;
 
 }
 
 /* Media quries here */
 
-@media screen and (max-width:300px) {
+@media screen and (max-width:400px) {
     .box {
         display: flex;
         flex-direction: column;
     }
-    .input-boxs{
+
+    .input-boxs {
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
         flex-shrink: 1;
+    }
+
+    .choice label {
+        width: 80vw;
     }
 }
 
@@ -121,21 +126,22 @@ footer ul li {
 }
 
 footer ul li a {
-    color: var(--primary-color);
-}
-
-footer ul li a:hover {
     color: var(--sec-color);
 }
 
+footer ul li a:hover {
+    color: var(--primary-color);
+}
+
 footer p {
+    color: var(--sec-color);
     margin: 5px;
     text-align: center;
 }
 
 footer p a {
     text-shadow: 1px 1px 3px var(--sec-color);
-    color: var(--sec-color);
+    color: var(--primary-color);
 }
 
 footer p span {
@@ -205,4 +211,28 @@ footer p span {
     text-align: center;
     color: var(--primary-color);
     text-shadow: 1px 1px 3px var(--sec-color);
+}
+
+/* TODO:  GuessTheTraingle Styling  */
+
+.choice {
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.choice label {
+    margin: 1rem;
+}
+
+/* Showing hiding elements here */
+.areaCalOption0 {
+    display: none;
+}
+
+.areaCalOption1 {
+    display: none;
+}
+
+.areaCalOption2 {
+    display: none;
 }
