@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/1ad4d3ae1e.js" crossorigin="anonymous" defer></script>
     <link rel="stylesheet" href="../style.css">
-    <title>Document</title>
+    <title>Area of traingle</title>
     <script src="script.js" defer></script>
 </head>
 <body>
@@ -21,19 +21,20 @@
         <div class="btn-section common">
             <form class="choice common">
                 <label>
-                    <input type="radio" name="areaCalcOption" value="areaCal0" checked>
+                    <input class="userChoice" type="radio" name="givenOption" value="areaCal0">
                     If you have length of 3 sides
                 </label>
                 <label>
-                    <input type="radio" name="areaCalcOption" value="areaCal1" checked>
+                    <input class="userChoice" type="radio" name="givenOption" value="areaCal1">
                     If you have base and height length
                 </label>
                 <label>
-                    <input type="radio" name="areaCalcOption" value="areaCal2" checked>
+                    <input class="userChoice" type="radio" name="givenOption" value="areaCal2">
                     If you have length of 2 sides and included angle
                 </label>
             </form>
-            <div class="areaCalOption0">
+            <hr class="hrLine">
+            <div class="areaCalOption">
                 <div class="common">
                     <form action="" onsubmit="return false">
                         <div class="input-boxs common">
@@ -48,7 +49,7 @@
                     </form>
                 </div>
             </div>
-            <div class="areaCalOption1">
+            <div class="areaCalOption">
                 <div class="common">
                     <form action="" onsubmit="return false">
                         <div class="input-boxs common">
@@ -62,12 +63,12 @@
                     </form>
                 </div>
             </div>
-            <div class="areaCalOption2">
+            <div class="areaCalOption">
                 <div class="common">
                     <form action="" onsubmit="return false">
                         <div class="input-boxs common">
                             <label for="sidesAngles" class="angle-label common">Enter sides and angle here</label>
-                            <input type="number" class="input-box" placeholder="First side" name='sidesAngles' required>
+                            <input type="number" class="input-box" placeholder="First side" name='sidesAngles'required>
                             <input type="number" class="input-box" placeholder="Second side" name='sidesAngles'
                                 required>
                             <input type="number" class="input-box" placeholder="Angle here" name='sidesAngles' required>
@@ -78,7 +79,7 @@
                     </form>
                 </div>
             </div>
-            <div class="output common">
+            <div class="output common" style="display: none;">
                 <p>Result will show-up here.
                 </p>
             </div>

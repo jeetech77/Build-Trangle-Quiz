@@ -213,7 +213,7 @@ footer p span {
     text-shadow: 1px 1px 3px var(--sec-color);
 }
 
-/* TODO:  GuessTheTraingle Styling  */
+/* TODO: AreaOFraingle Styling */
 
 .choice {
     flex-direction: column;
@@ -221,18 +221,22 @@ footer p span {
 }
 
 .choice label {
+    word-spacing: 4px;
     margin: 1rem;
+    font-size: large;
+    font-weight: 600;
+}
+
+hr {
+    border: 1px solid var(--sec-color);
+    box-shadow: 1px 1px 5px 2px cyan;
+    width: 100vw;
+    visibility: hidden;
+    margin: 1rem 0;
 }
 
 /* Showing hiding elements here */
-.areaCalOption0 {
-    display: none;
-}
 
-.areaCalOption1 {
-    display: none;
-}
-
-.areaCalOption2 {
+.areaCalOption {
     display: none;
 }
