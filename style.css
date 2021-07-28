@@ -240,3 +240,41 @@ hr {
 .areaCalOption {
     display: none;
 }
+
+/* TODO:  Quiz  Styling  */
+.questions {
+    word-spacing: 5px;
+    margin: 1rem 0;
+    font-weight: 600;
+    background-color: var(--bg-color);
+    width: 80vw;
+    border-radius: 2rem;
+    text-align: center;
+}
+
+.questions div {
+    margin: 10px 1rem;
+    padding: .5rem;
+}
+
+.first-qus {
+    margin-top: 2rem !important;
+}
+
+.last-opt {
+    margin-bottom: 2rem !important;
+}
+.opt {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    color: var(--sec-color);
+    background-color: #0000008a;
+    border-radius: 40px;
+}
+
+.opt label {
+    word-spacing: 1rem;
+    padding: 1rem;
+}
