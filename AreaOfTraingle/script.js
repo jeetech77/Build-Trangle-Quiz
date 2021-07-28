@@ -10,31 +10,45 @@ const domForms = document.forms;   // Selecting all the forms present in the doc
 
 // Trying foreach method
 
-// userChoice.forEach((e, i) => {
-//     e.addEventListener('change', () => {
-//         console.log(i);
-//         displayAreaCal(i);
-//     })
-// })
+userChoice.forEach((e, i) => {
+    e.addEventListener('change', () => {
+        if (i === 0)
+        {
+            displayAreaCal(areaCalOption[i], areaCalOption[1], areaCalOption[2]);
+            outputPara.style.display = 'block';
+            outputPara.textContent = `Area : √s * (s-a) * (s-b)* (s-c)`;
+        }
+        else if (i === 1) {
+            displayAreaCal(areaCalOption[i], areaCalOption[0], areaCalOption[2]);
+            outputPara.style.display='block';
+            outputPara.textContent = `Area : 1/2 * base * height`;
+        }
+        else if (i === 2) {
+            displayAreaCal(areaCalOption[i], areaCalOption[0], areaCalOption[1]);
+            outputPara.style.display='block';
+            outputPara.textContent = `Area : 1/2 * b * c * sin(A)`;
+        }
+    })
+})
 
-userChoice[0].addEventListener('change', () => {
-    console.log("chaging 1");
-    displayAreaCal(areaCalOption[0], areaCalOption[1], areaCalOption[2]);
-    outputPara.style.display='block';
-    outputPara.textContent = `Area : √s * (s-a) * (s-b)* (s-c)`;
-})
-userChoice[1].addEventListener('change', () => {
-    console.log("chaging 2");
-    displayAreaCal(areaCalOption[1], areaCalOption[0], areaCalOption[2]);
-    outputPara.style.display='block';
-    outputPara.textContent = `Area : 1/2 * base * height`;
-})
-userChoice[2].addEventListener('change', () => {
-    displayAreaCal(areaCalOption[2], areaCalOption[1], areaCalOption[0]);
-    outputPara.style.display='block';
-    outputPara.textContent = `Area : 1/2 * b * c * sin(A)`;
-    console.log("chaging 3");
-})
+// userChoice[0].addEventListener('change', () => {
+//     console.log("chaging 1");
+//     displayAreaCal(areaCalOption[0], areaCalOption[1], areaCalOption[2]);
+//     outputPara.style.display='block';
+//     outputPara.textContent = `Area : √s * (s-a) * (s-b)* (s-c)`;
+// })
+// userChoice[1].addEventListener('change', () => {
+//     console.log("chaging 2");
+//     displayAreaCal(areaCalOption[1], areaCalOption[0], areaCalOption[2]);
+//     outputPara.style.display='block';
+//     outputPara.textContent = `Area : 1/2 * base * height`;
+// })
+// userChoice[2].addEventListener('change', () => {
+//     displayAreaCal(areaCalOption[2], areaCalOption[1], areaCalOption[0]);
+//     outputPara.style.display='block';
+//     outputPara.textContent = `Area : 1/2 * b * c * sin(A)`;
+//     console.log("chaging 3");
+// })
 
 function displayAreaCal(show, hide1, hide2) {
     horizentalLine.style.visibility = 'visible';
