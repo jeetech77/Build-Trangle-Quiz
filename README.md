@@ -2,6 +2,8 @@
 
 A fun GUI app to solve triangle problems and learn more about them.
 
+[Check Live Here ](https://traingle.netlify.app)
+
 ## How To Use ?
 
 - On the homepage, there will be four button section.
@@ -14,7 +16,7 @@ A fun GUI app to solve triangle problems and learn more about them.
 - Click on your desired option to continue.
 - Enter the required value to get the result.
 
-## Tech-Stack'
+## Tech-Stack
 
 - HTML
 - CSS 
