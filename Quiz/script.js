@@ -9,7 +9,9 @@ const correctAns = [
 ];
 
 domForms.addEventListener('submit', () => {
-
+    // Reseting both values for instant changes.
+    userAnswers.length = 0;
+    score = 0;
     // Iterating to every single input of documents
     for (const iterator of inputs) {
         if (iterator.checked===true) {
@@ -28,7 +30,6 @@ let score = 0;
 function checkAns() {
     userAnswers.forEach((element, index) => {
         if (element===correctAns[index]) {
-            console.log("Right answer", index, element);
             allOptions[index].style.backgroundColor = "#1d9e1d9e";
             score++;
         }
