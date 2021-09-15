@@ -7,6 +7,7 @@ btnSumbit.addEventListener("click", () => {
     let thirdAngle = Number(userInput[2].value);
     sum = firstAngle + secondAngle + thirdAngle;
     if (firstAngle > 0 && secondAngle > 0 && thirdAngle > 0) {
+        outputPara.style.borderColor = 'aqua';
         if (sum === 180) {
             outputPara.textContent = "Yay, These angles will make a traingle."
         } else if (sum === 0) {
