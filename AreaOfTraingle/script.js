@@ -4,7 +4,7 @@ const outputPara = document.querySelector(".output");
 const userChoice = document.querySelectorAll(".userChoice");
 const areaCalOption = document.querySelectorAll(".areaCalOption");
 const horizentalLine = document.querySelector('.hrLine');
-const domForms = document.forms;   // Selecting all the forms present in the document
+const domForms = document.forms; // Selecting all the forms present in the document
 
 //! To show hide Elements...
 
@@ -12,20 +12,17 @@ const domForms = document.forms;   // Selecting all the forms present in the doc
 
 userChoice.forEach((e, i) => {
     e.addEventListener('change', () => {
-        if (i === 0)
-        {
+        if (i === 0) {
             displayAreaCal(areaCalOption[i], areaCalOption[1], areaCalOption[2]);
             outputPara.style.display = 'block';
             outputPara.textContent = `Area : √s * (s-a) * (s-b)* (s-c)`;
-        }
-        else if (i === 1) {
+        } else if (i === 1) {
             displayAreaCal(areaCalOption[i], areaCalOption[0], areaCalOption[2]);
-            outputPara.style.display='block';
+            outputPara.style.display = 'block';
             outputPara.textContent = `Area : 1/2 * base * height`;
-        }
-        else if (i === 2) {
+        } else if (i === 2) {
             displayAreaCal(areaCalOption[i], areaCalOption[0], areaCalOption[1]);
-            outputPara.style.display='block';
+            outputPara.style.display = 'block';
             outputPara.textContent = `Area : 1/2 * b * c * sin(A)`;
         }
     })
@@ -65,14 +62,12 @@ domForms[1].addEventListener('submit', e => {
     let thirdSide = Number(e.target[2].value);
 
     //Checking for valid traingle
-    if ((firstSide + secondSide > thirdSide) && (secondSide + thirdSide > firstSide) && (thirdSide + firstSide > secondSide))
-    {
+    if ((firstSide + secondSide > thirdSide) && (secondSide + thirdSide > firstSide) && (thirdSide + firstSide > secondSide)) {
         outputPara.style.borderColor = 'aqua';
         let temp = (firstSide + secondSide + thirdSide) / 2;
-        let area = Math.sqrt(temp * (temp - firstSide)*(temp - secondSide)*(temp - thirdSide));
-        outputPara.textContent = `Area will be : ${area.toFixed(3)}`;   // toFixed for decimal precision 
-    }
-    else {
+        let area = Math.sqrt(temp * (temp - firstSide) * (temp - secondSide) * (temp - thirdSide));
+        outputPara.textContent = `Area will be : ${area.toFixed(3)}`; // toFixed for decimal precision 
+    } else {
         outputPara.textContent = "Enter valid sizes, Sum of two angles can't be less than third one.";
         outputPara.style.borderColor = 'red';
     }
@@ -82,14 +77,27 @@ domForms[1].addEventListener('submit', e => {
 domForms[2].addEventListener('submit', e => {
     let base = Number(e.target[0].value);
     let height = Number(e.target[1].value);
-    let area = ((base + height) / 2);
-    outputPara.textContent = `Area will be : ${area.toFixed(3)}`;
+
+    if (base > 0 && height > 0) {
+        let area = ((base + height) / 2);
+        outputPara.textContent = `Area will be : ${area.toFixed(3)}`;
+        outputPara.style.borderColor = 'aqua';
+    } else {
+        outputPara.textContent = `Enter valid inputs.`;
+        outputPara.style.borderColor = 'red';
+    }
 });
 
 domForms[3].addEventListener('submit', e => {
     let firstSide = Number(e.target[0].value);
     let secondSide = Number(e.target[1].value);
     let angle = Number(e.target[2].value);
-    let area = (((firstSide * secondSide) * (Math.sin((angle * Math.PI) / 180))) / 2);
-    outputPara.textContent = `Area will be : ${area.toFixed(3)}`;
+    if (firstSide > 0 && secondSide > 0 && angle > 0) {
+        let area = (((firstSide * secondSide) * (Math.sin((angle * Math.PI) / 180))) / 2);
+        outputPara.textContent = `Area will be : ${area.toFixed(3)}`;
+        outputPara.style.borderColor = 'aqua';
+    } else {
+        outputPara.textContent = `Enter valid inputs.`;
+        outputPara.style.borderColor = 'red';
+    }
 });
